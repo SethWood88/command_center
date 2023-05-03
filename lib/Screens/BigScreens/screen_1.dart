@@ -1,3 +1,4 @@
+import 'package:command_center/Widgets/BorderWidgets/BorderRight.dart';
 import 'package:command_center/Widgets/CustomButtonWidget.dart';
 import 'package:command_center/Widgets/ValueWidget.dart';
 import 'package:flutter/material.dart';
@@ -16,25 +17,11 @@ class _big_screen_1State extends State<big_screen_1> {
       backgroundColor: Colors.black,
       body: Stack(children: [
         //This where the border goes
-        Container(
-          color: Colors.blue[900],
-        ),
-        Center(
-          child: Column(
-            children: [
-              Container(
-                color: Colors.black,
-                height: 50,
-                child: Text("Monthly", style: TextStyle(fontSize: 38, color: Colors.blue[100]),),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 100),
+        BorderRight(metricName: "CICD Total"),
         Padding(
-          padding: const EdgeInsets.all(50),
+          padding: const EdgeInsets.only(top: 100, bottom: 50, left: 0, right: 250),
           child: Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: Colors.black),
+            decoration: BoxDecoration(borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15)), color: Colors.black),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
